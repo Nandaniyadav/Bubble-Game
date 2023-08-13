@@ -59,6 +59,9 @@ html,body
     width: 100%;
     height: calc(100% - 100px);
     padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .bubble
 {
