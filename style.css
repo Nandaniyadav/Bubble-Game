@@ -1,16 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana;
 }
-html,body
-{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
-#main
-{
+
+#main {
     height: 100%;
     width: 100%;
     background-color: rgb(185, 244, 185);
@@ -18,15 +19,16 @@ html,body
     align-items: center;
     justify-content: center;
 }
-#panel
-{
+
+#panel {
     height: 80%;
     width: 80%;
     border-radius: 5px;
     background-color: #fff;
     overflow: hidden;
 }
-#ptop{
+
+#ptop {
     width: 100%;
     height: 100px;
     background-color: rgb(64, 240, 64);
@@ -34,38 +36,42 @@ html,body
     justify-content: space-between;
     display: flex;
     align-items: center;
-
 }
-.elem{
+
+.elem {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2px;
 }
-.elem h3{
+
+.elem h3 {
     font-weight: 500;
     font-size: 20px;
 }
 
-.box{
-    padding: 10px;
+.box {
+    padding: 5px;
     background-color: #fff;
     border-radius: 5px;
     color: #000;
     font-weight: 700;
     font-size: 25px;
+    margin-right: 50px;
 }
-#pbottom
-{
+
+#pbottom {
     width: 100%;
     height: calc(100% - 100px);
     padding: 20px;
+    align-items: center;
+    justify-content: center;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-.bubble
-{
+
+.bubble {
     height: 40px;
     width: 40px;
     background-color: rgb(9, 168, 9);
@@ -75,8 +81,8 @@ html,body
     justify-content: center;
     align-items: center;
 }
-.bubble:hover
-{
+
+.bubble:hover {
     background-color: green;
     cursor: pointer;
 }

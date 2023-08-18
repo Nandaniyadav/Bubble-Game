@@ -1,12 +1,15 @@
 var score = 0;
+var timer = 60;
+var hitrn = 0;
+
 function increaseScore() {
   score += 10;
   document.querySelector("#scoreval").textContent = score;
 }
 
 function getnewHit() {
-  var rn = Math.floor(Math.random() * 10);
-  document.querySelector("#hitval").textContent = rn;
+  hitrn = Math.floor(Math.random() * 10);
+  document.querySelector("#hitval").textContent = hitrn;
 }
 
 function makeBubble() {
@@ -18,7 +21,6 @@ function makeBubble() {
   document.querySelector("#pbottom").innerHTML = clutter;
 }
 
-var timer = 60;
 function runTime() {
   var timerint = setInterval(function () {
     if (timer > 0) {
@@ -26,9 +28,22 @@ function runTime() {
       document.querySelector("#timerval").textContent = timer;
     } else {
       clearInterval(timerint);
+      document.querySelector("#pbottom").innerHTML = `<h1>Game Over</h1>`;
     }
   }, 1000);
 }
+
+document.querySelector("#pbottom").addEventListener("click", function (detls) {
+  var clickednum = Number(detls.target.textContent);
+  // console.log(detls.target)
+
+  if (clickednum === hitrn) {
+    increaseScore();
+    makeBubble();
+    getnewHit();
+  }
+});
+
 runTime();
 makeBubble();
 getnewHit();
